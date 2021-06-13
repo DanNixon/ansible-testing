@@ -28,7 +28,7 @@ runs:
           ansible-lint \
           molecule[podman] \
           yamllint \
-          testinfra
+          pytest-testinfra
 
     - name: Install the collection
       shell: bash
