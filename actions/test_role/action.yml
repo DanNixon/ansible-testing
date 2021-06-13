@@ -13,6 +13,7 @@ runs:
     - name: Install podman
       shell: bash
       run: |
+        set -ex
         . /etc/os-release
         echo "deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_${VERSION_ID}/ /" | sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list
         curl -L "https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_${VERSION_ID}/Release.key" | sudo apt-key add -
@@ -22,6 +23,7 @@ runs:
     - name: Install dependencies
       shell: bash
       run: |
+        set -ex
         python -m pip install --upgrade pip
         pip install \
           ansible \
@@ -37,6 +39,7 @@ runs:
     - name: Run tests
       shell: bash
       run: |
+        set -ex
         molecule --version
         ansible --version
         cd "roles/${{ inputs.role }}"
