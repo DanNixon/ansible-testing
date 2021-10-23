@@ -6,6 +6,9 @@ inputs:
   role:
     description: Name of role to test
     required: true
+  scenario:
+    description: Molecule scenario to run
+    default: default
 
 runs:
   using: composite
@@ -43,4 +46,4 @@ runs:
         molecule --version
         ansible --version
         cd "roles/${{ inputs.role }}"
-        molecule test
+        molecule test --scenario-name "${{ inputs.scenario }}"
