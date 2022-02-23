@@ -1,4 +1,4 @@
-# Ansible test helpers [![Container Images](https://github.com/DanNixon/ansible-testing/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/DanNixon/ansible-testing/actions/workflows/ci.yml)
+# Ansible test helpers [![Container Images](https://github.com/DanNixon/ansible-testing/actions/workflows/container_images.yml/badge.svg?branch=main)](https://github.com/DanNixon/ansible-testing/actions/workflows/container_images.yml)
 
 Common test helpers for Ansible/Molecule/GitHub Actions.
 
