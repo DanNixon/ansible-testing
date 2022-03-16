@@ -30,7 +30,6 @@ runs:
         python -m pip install --upgrade pip
         pip install \
           ansible \
-          ansible-lint \
           molecule[podman]==3.4 \
           yamllint \
           pytest-testinfra
