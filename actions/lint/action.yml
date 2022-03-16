@@ -1,0 +1,30 @@
+---
+name: Ansible Lint
+description: Runs ansible-lint on a repository
+
+runs:
+  using: composite
+  steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+
+    - name: Install dependencies
+      shell: bash
+      run: |
+        set -ex
+        python -m pip install --upgrade pip
+        pip install \
+          ansible \
+          ansible-lint
+
+    - name: Ansible Lint
+      shell: bash
+      run: |
+        set -ex
+        ansible-lint --version
+        ansible-lint -v
