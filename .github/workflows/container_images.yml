@@ -17,7 +17,8 @@ jobs:
       matrix:
         image:
           - archlinux
-          - ubuntu
+          - ubuntufocal
+          - ubuntujammy
 
     steps:
       - uses: actions/checkout@v2
