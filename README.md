@@ -6,4 +6,7 @@ Currently includes:
 
 - [An action](./actions/test_role) for testing roles inside of collections
 - [An action](./actions/lint) for running Ansible Lint on an entire repository
-- Container images for [Ubuntu](./Containerfile.ubuntu) and [Arch](./Containerfile.archlinux) used for Molecule testing of roles
+- Container images for Molecule testing for the following platforms:
+  - [Ubuntu focal/20.04](./Containerfile.ubuntufocal)
+  - [Ubuntu jammy/22.04](./Containerfile.ubuntujammy)
+  - [Arch](./Containerfile.archlinux)
