@@ -27,4 +27,4 @@ runs:
       run: |
         set -ex
         ansible-lint --version
-        ansible-lint -v
+        ansible-lint -vv
