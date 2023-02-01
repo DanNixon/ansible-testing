@@ -21,7 +21,7 @@ jobs:
           - ubuntujammy
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Build container image
         id: build-image
